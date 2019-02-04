@@ -164,6 +164,14 @@ built to run on https://fly.io to route traffic from the /admin UI to Elastic Be
 Lambda deal with high throughput traffic (sending and receiving texts) and the long running servers on EBs can handle actions (such as
 uploading or exporting) that may exceed Lambda's limits.
 
+### Heroku
+
+<a href="https://heroku.com/deploy">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+</a>
+
+Follow up instructions located [here](./docs/HOWTO_HEROKU_DEPLOY.md)
+
 # License
 
 Spoke is licensed under the MIT license.
