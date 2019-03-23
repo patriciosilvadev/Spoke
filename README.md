@@ -14,15 +14,15 @@ that goal. See [`HOWTO_MIGRATE_FROM_MOVEON_MAIN.md`](./docs/HOWTO_MIGRATE_FROM_M
 
 1.  Install Postgres.
 2.  Install the Node version listed under `engines` in `package.json`. [NVM](https://github.com/creationix/nvm) is one way to do this.
-3.  `npm install`
-4.  `npm install -g foreman`
+3.  `yarn install`
+4.  `yarn install -g foreman`
 5.  `cp .env.example .env`
 6.  If you want to use Postgres:
     - In `.env` set `DB_TYPE=pg`. (Otherwise, you will use sqlite.)
     - Set `DB_PORT=5432`, which is the default port for Postgres.
     - Create the spokedev database: `psql -c "create database spokedev;"`
 7.  Create an [Auth0](https://auth0.com) account. In your Auth0 account, go to [Applications](https://manage.auth0.com/#/applications/), click on `Default App` and then grab your Client ID, Client Secret, and your Auth0 domain (should look like xxx.auth0.com). Add those inside your `.env` file (AUTH0_CLIENT_ID, AUTH0_CLIENT_SECRET, AUTH0_DOMAIN respectively).
-8.  Run `npm run dev` to create and populate the tables.
+8.  Run `yarn run dev` to create and populate the tables.
 9.  In your Auth0 app settings, add `http://localhost:3000/login-callback` , `http://localhost:3000` and `http://localhost:3000/logout-callback` to "Allowed Callback URLs", "Allowed Web Origins" and "Allowed Logout URLs" respectively. (If you get an error when logging in later about "OIDC", go to Advanced Settings section, and then OAuth, and turn off 'OIDC Conformant')
 10. Add a new [rule](https://manage.auth0.com/#/rules/create) in Auth0:
 
@@ -131,7 +131,7 @@ callback(null, user, context);
 
     </details>
 
-12. If the application is still running from step 8, kill the process and re-run `npm run dev` to restart the app. Wait until you see both "Node app is running ..." and "webpack: Compiled successfully." before attempting to connect. (make sure environment variable `JOBS_SAME_PROCESS=1`)
+12. If the application is still running from step 8, kill the process and re-run `yarn run dev` to restart the app. Wait until you see both "Node app is running ..." and "webpack: Compiled successfully." before attempting to connect. (make sure environment variable `JOBS_SAME_PROCESS=1`)
 13. Go to `http://localhost:3000` to load the app.
 14. As long as you leave `SUPPRESS_SELF_INVITE=` blank and unset in your `.env` you should be able to invite yourself from the homepage.
     - If you DO set that variable, then spoke will be invite-only and you'll need to generate an invite. Run, inside of a `psql` shell:
