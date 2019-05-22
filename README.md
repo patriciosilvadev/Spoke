@@ -154,9 +154,11 @@ To simulate receiving a reply from a contact you can use the Send Replies utilit
 
 **Twilio**
 
-Twilio provides test credentials that will not charge your account as described in their [documentation](https://www.twilio.com/docs/iam/test-credentials). You may use either your test credentials or your live keys by following the instructions [here](https://github.com/MoveOnOrg/Spoke/blob/main/docs/HOWTO_INTEGRATE_TWILIO.md).
+Twilio provides [test credentials](https://www.twilio.com/docs/iam/test-credentials) that will not charge your account as described in their documentation. To setup Twilio follow our [Twilio setup guide](https://github.com/MoveOnOrg/Spoke/blob/main/docs/HOWTO_INTEGRATE_TWILIO.md).
 
 ## Getting started with Docker
+
+Docker is optional, but can help with a consistent development environment using postgres.
 
 1.  `cp .env.example .env`
 2.  Follow Steps 7, 9, & 10 above to set up your [Auth0](https://auth0.com) account.
