@@ -405,8 +405,14 @@ class CampaignInteractionStepsForm extends React.Component {
           ]}
         >
           Pasting over the initial message will overwrite the whole script and
-          you may need to change your sync configuration. Are you sure you want
-          to continue?
+          you may need to change the{" "}
+          <a
+            href="https://docs.spokerewired.com/article/93-van-list-loading"
+            target="_blank"
+          >
+            {" "}
+            mapping of your integration
+          </a>. Are you sure you want to continue?
         </Dialog>
         <CampaignFormSectionHeading
           title="What do you want to discuss?"
